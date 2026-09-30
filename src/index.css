@@ -468,3 +468,57 @@
   .experience-progression, .experience-progression > span { gap: 0.5rem; }
   .experience-progression .editorial-link { font-size: 1rem; }
 }
+/* About / approach: four ideas, followed by a quiet technical index. */
+.about-editorial { --color-muted: #595c62; scroll-margin-top: calc(var(--portfolio-nav-height) + 1rem); }
+.about-shell { max-width: 1440px; margin-inline: auto; padding: clamp(2rem, 5vw, 5rem) clamp(1rem, 5vw, 5rem) clamp(5rem, 10vw, 10rem); }
+.about-eyebrow { font-size: 0.8125rem; line-height: 1.7; letter-spacing: 0.06em; color: var(--color-muted); }
+.about-display { font-family: var(--font-display); font-size: clamp(5rem, 17vw, 16rem); line-height: 0.88; letter-spacing: -0.025em; font-weight: 400; margin-top: 2rem; }
+.about-display span { display: block; }
+.about-display span:first-child { color: #b9b9b3; }
+.about-display span:last-child { margin-left: 15%; font-style: italic; }
+.about-personal { max-width: 48ch; margin: 2.5rem 0 0 auto; font-size: clamp(1.0625rem, 0.96rem + 0.35vw, 1.25rem); line-height: 1.8; }
+.about-principles { list-style: none; padding: 0; margin: clamp(4rem, 9vw, 9rem) 0 0; }
+.about-principle { display: grid; grid-template-columns: 3rem minmax(0, 1fr); gap: 1rem; align-items: start; }
+.about-principle + .about-principle { margin-top: clamp(3.5rem, 7vw, 7rem); }
+.about-principle-number { font-family: var(--font-display); font-size: clamp(2.75rem, 7vw, 6.5rem); line-height: 1; color: #a6a69f; }
+.about-principle-copy { min-width: 0; max-width: 58ch; }
+.about-principle h3 { font-family: var(--font-display); font-weight: 400; font-size: clamp(2.2rem, 4.8vw, 4.5rem); line-height: 1.06; letter-spacing: -0.015em; margin-bottom: 1.25rem; }
+.about-principle-description { font-size: clamp(1rem, 0.9rem + 0.35vw, 1.25rem); line-height: 1.8; }
+.about-annotation { margin-top: 1.5rem; font-size: clamp(0.875rem, 0.82rem + 0.15vw, 0.9375rem); line-height: 1.9; color: var(--color-muted); }
+.about-toolkit { margin-top: clamp(4.5rem, 10vw, 10rem); }
+.about-index-intro h3 { font-family: var(--font-display); font-size: clamp(2.5rem, 4vw, 3.5rem); line-height: 1.1; font-weight: 400; margin-top: 0.5rem; }
+.about-toolkit-index { margin-top: 2rem; }
+.about-toolkit-row { padding-block: 1.25rem; border-top: 1px solid var(--color-line); }
+.about-toolkit-row dt { font-size: 0.8125rem; letter-spacing: 0.04em; line-height: 1.8; margin-bottom: 0.75rem; }
+.about-toolkit-row ul { display: flex; flex-wrap: wrap; gap: 0.35rem 1.25rem; list-style: none; font-size: clamp(0.9375rem, 0.85rem + 0.25vw, 1.0625rem); line-height: 1.8; color: var(--color-muted); }
+.about-education { margin-top: clamp(3rem, 6vw, 6rem); padding-top: 2rem; border-top: 1px solid var(--color-line); }
+.about-education > h3 { font-size: 1rem; font-weight: 500; }
+.about-education > ul { list-style: none; display: grid; gap: 1.75rem; margin-top: 1.5rem; }
+.about-education h4 { font-size: 1rem; font-weight: 500; line-height: 1.7; margin-bottom: 0.5rem; }
+.about-education p { font-size: 0.9375rem; line-height: 1.8; color: var(--color-muted); }
+@media (min-width: 48rem) {
+  .about-principle { grid-template-columns: 6rem minmax(0, 1fr); gap: 2rem; }
+  .about-toolkit-row { display: grid; grid-template-columns: 12rem minmax(0, 1fr); gap: 2rem; }
+  .about-toolkit-row dt { margin: 0; }
+  .about-education > ul { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 3rem; }
+}
+@media (min-width: 64rem) {
+  .about-intro { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr); gap: 0 5rem; align-items: end; }
+  .about-intro > .about-eyebrow { grid-column: 1 / -1; }
+  .about-personal { margin: 0 0 1rem; max-width: 38ch; }
+  .about-principle { grid-template-columns: 7rem minmax(0, 1fr); gap: 2.5rem; }
+  .about-principle-architecture { max-width: 70%; margin-left: 20%; }
+  .about-principle-fundamentals { max-width: 72%; }
+  .about-principle-quality { max-width: 65%; margin-left: 35%; }
+  .about-principle-quality h3 { font-size: clamp(4rem, 7vw, 6rem); }
+  .about-principle-full-stack { max-width: 82%; margin-top: 8rem; }
+  .about-principle-full-stack .about-principle-copy { max-width: 65ch; }
+  .about-toolkit { display: grid; grid-template-columns: 15rem minmax(0, 1fr); gap: 4rem; }
+  .about-toolkit-index { margin-top: 0; }
+  .about-education { display: grid; grid-template-columns: 15rem minmax(0, 1fr); gap: 4rem; }
+  .about-education > ul { margin-top: 0; }
+}
+@media (max-width: 24rem) {
+  .about-principle { grid-template-columns: 2rem minmax(0, 1fr); gap: 0.75rem; }
+  .about-principle-number { font-size: 2.3rem; }
+}

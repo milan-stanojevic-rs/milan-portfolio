@@ -1,3 +1,6 @@
+import { useRef } from 'react'
+import { useAboutMotion } from '../../hooks/useAboutMotion'
+
 const toolkitGroups = [
   {
     name: 'FRONTEND',
@@ -21,85 +24,85 @@ const toolkitGroups = [
   },
 ]
 
+const principles = [
+  {
+    id: 'architecture', number: '01', title: 'UI architecture',
+    copy: 'I build reusable React components around clear state boundaries and maintainable frontend structure. Shared UI patterns and design-system thinking keep complex interfaces consistent.',
+    annotation: 'Components / State / Design systems',
+  },
+  {
+    id: 'fundamentals', number: '02', title: 'Browser & fundamentals',
+    copy: 'I like understanding what happens beneath the framework: the DOM, browser behavior and HTTP flows. Working with browser APIs means considering performance, resource lifecycles and how an interaction actually reaches the screen.',
+    annotation: 'DOM / HTTP / Browser APIs',
+  },
+  {
+    id: 'quality', number: '03', title: 'Quality',
+    copy: 'Testing, accessibility and maintainability are part of building the interface. I care about keyboard navigation, responsive behavior and thoughtful interactions, supported by unit, integration and end-to-end tests.',
+    annotation: 'Testing / Accessibility / Interaction',
+  },
+  {
+    id: 'full-stack', number: '04', title: 'Full-stack thinking',
+    copy: 'I follow a feature beyond the frontend: through the API, backend logic and persistence, to delivery. Independent projects let me explore those connections with Node.js, Fastify, PostgreSQL, browser Media APIs and AI integrations.',
+    annotation: 'Frontend → API → Backend → Persistence → Delivery',
+  },
+]
+
 function About() {
+  const sectionRef = useRef<HTMLElement>(null)
+  useAboutMotion(sectionRef)
+
   return (
-    <section id="about" className="scroll-mt-20 border-t border-line bg-canvas text-ink">
-      <div className="mx-auto max-w-[1200px] px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-28">
-        <p className="text-xs font-medium tracking-wide text-muted sm:text-sm">
-          About
-        </p>
-        <h2 data-reveal className="mt-4 text-2xl leading-tight font-semibold tracking-tight sm:text-3xl lg:text-4xl">
-          A little about how I work.
-        </h2>
+    <section ref={sectionRef} id="about" aria-labelledby="about-heading" className="about-editorial bg-canvas text-ink">
+      <div className="about-shell">
+        <header className="about-intro">
+          <p className="about-eyebrow">About / Approach</p>
+          <h2 id="about-heading" className="about-display"><span data-about-display>How </span><span data-about-display>I build</span></h2>
+          <p className="about-personal">I'm a frontend-focused Full-Stack Developer based in Belgrade, Serbia, with professional experience building enterprise B2B SaaS applications.</p>
+        </header>
 
-        <div className="mt-10 grid items-start gap-10 sm:mt-12 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)] lg:gap-12">
-          <div data-reveal className="min-w-0 max-w-xl space-y-6 text-base leading-8 text-muted">
-            <p>
-              I'm a frontend-focused Full-Stack Developer based in Belgrade, Serbia,
-              with professional experience building enterprise B2B SaaS applications.
-            </p>
-            <p>
-              My main focus is React and TypeScript, with particular interest in
-              reusable UI architecture, responsive interfaces, state management,
-              API integration, accessibility and frontend testing.
-            </p>
-            <p>
-              I enjoy understanding how systems work beneath framework abstractions
-              — from browser behavior and HTTP flows to application state, API
-              boundaries and backend persistence.
-            </p>
-            <p>
-              Alongside my professional work, I build independent projects to
-              explore technologies and architectural patterns beyond my day-to-day
-              stack, including modern React, Node.js, Fastify, PostgreSQL, browser
-              Media APIs and AI integrations.
-            </p>
-          </div>
+        <ol className="about-principles">
+          {principles.map((principle) => (
+            <li key={principle.id} className={`about-principle about-principle-${principle.id}`}>
+              <span data-about-number className="about-principle-number" aria-hidden="true">{principle.number}</span>
+              <div data-about-reveal className="about-principle-copy">
+                <h3>{principle.title}</h3>
+                <p className="about-principle-description">{principle.copy}</p>
+                <p className="about-annotation">{principle.annotation}</p>
+              </div>
+            </li>
+          ))}
+        </ol>
 
-          <div data-reveal className="min-w-0">
-            <h3 className="text-xl font-semibold tracking-tight">Core toolkit</h3>
-            <div className="mt-5 divide-y divide-line border-y border-line">
-              {toolkitGroups.map((group) => (
-                <div key={group.name} className="py-4">
-                  <h4 className="font-mono text-xs font-medium tracking-wide">
-                    {group.name}
-                  </h4>
-                  <ul className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-sm leading-6 text-muted">
-                    {group.technologies.map((technology) => (
-                      <li key={technology}>{technology}</li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
+        <section aria-labelledby="about-toolkit-heading" className="about-toolkit">
+          <div data-about-reveal className="about-index-intro">
+            <p className="about-eyebrow">Technical index</p>
+            <h3 id="about-toolkit-heading">Core toolkit</h3>
           </div>
-        </div>
+          <dl className="about-toolkit-index">
+            {toolkitGroups.map((group) => (
+              <div key={group.name} data-about-reveal className="about-toolkit-row">
+                <dt>{group.name}</dt>
+                <dd><ul>{group.technologies.map((technology) => <li key={technology}>{technology}</li>)}</ul></dd>
+              </div>
+            ))}
+          </dl>
+        </section>
 
-        <div data-reveal className="mt-12 border-t border-line pt-8 lg:mt-16">
-          <h3 className="text-lg font-semibold tracking-tight">Education</h3>
-          <div className="mt-5 grid gap-6 lg:grid-cols-2 lg:gap-12">
-            <div className="min-w-0">
-              <h4 className="text-base leading-7 font-medium">
-                Master of Science in Information Technology
-              </h4>
-              <p className="mt-2 text-sm leading-6 text-muted">
-                Part-time · 2021 — Present
-              </p>
-              <p className="text-sm leading-6 text-muted">
-                Information Technology School, Belgrade
-              </p>
-            </div>
-            <div className="min-w-0">
-              <h4 className="text-base leading-7 font-medium">
-                Bachelor of Science in Information Technology
-              </h4>
-              <p className="mt-2 text-sm leading-6 text-muted">2014 — 2018</p>
-              <p className="text-sm leading-6 text-muted">
-                Information Technology School, Belgrade
-              </p>
-            </div>
-          </div>
-        </div>
+        <section aria-labelledby="about-education-heading" className="about-education">
+          <h3 id="about-education-heading">Education</h3>
+          <ul>
+            <li>
+              <h4>Master of Science in Information Technology</h4>
+              <p>Part-time · 2021 — Present</p>
+              <p>Information Technology School, Belgrade</p>
+            </li>
+            <li>
+              <h4>Bachelor of Science in Information Technology</h4>
+              <p>2014 — 2018</p>
+              <p>Information Technology School, Belgrade</p>
+            </li>
+          </ul>
+        </section>
       </div>
     </section>
   )
