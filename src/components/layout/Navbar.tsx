@@ -61,7 +61,7 @@ function Navbar() {
   }
 
   return (
-    <header className="sticky top-0 z-50 border-b border-line bg-canvas text-ink supports-backdrop-filter:bg-canvas/90 supports-backdrop-filter:backdrop-blur-sm">
+    <header className="portfolio-nav sticky top-0 z-50 bg-canvas text-ink supports-backdrop-filter:bg-canvas/90 supports-backdrop-filter:backdrop-blur-sm">
       <div className="mx-auto flex h-18 max-w-[1200px] items-center justify-between px-4 sm:px-6 md:grid md:grid-cols-[1fr_auto_1fr] lg:px-8">
         <a
           href="#top"
@@ -101,7 +101,7 @@ function Navbar() {
             href="/Milan_Stanojevic_CV.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex min-h-11 items-center rounded-lg border border-line px-3 py-2 text-sm font-semibold whitespace-nowrap no-underline transition-colors duration-150 hover:bg-surface"
+            className="inline-flex min-h-11 items-center px-3 py-2 text-sm font-semibold whitespace-nowrap no-underline transition-colors duration-150 hover:bg-surface"
           >
             CV ↓
           </a>
@@ -112,7 +112,7 @@ function Navbar() {
           aria-expanded={isMenuOpen}
           aria-controls="mobile-navigation"
           onClick={() => setIsMenuOpen((open) => !open)}
-          className="inline-flex min-h-11 items-center rounded-lg border border-line px-3 py-2 text-sm font-semibold hover:bg-surface md:hidden"
+          className="inline-flex min-h-11 items-center px-3 py-2 text-sm font-semibold hover:bg-surface md:hidden"
         >
           {isMenuOpen ? 'Close' : 'Menu'}
         </button>
@@ -154,7 +154,7 @@ function Navbar() {
               target="_blank"
               rel="noopener noreferrer"
               onClick={closeMenu}
-              className="inline-flex min-h-11 items-center rounded-lg border border-line px-3 py-2 text-sm font-semibold no-underline hover:bg-surface"
+              className="inline-flex min-h-11 items-center px-3 py-2 text-sm font-semibold no-underline hover:bg-surface"
             >
               CV ↓
             </a>

@@ -1,4 +1,5 @@
 import { useRef } from 'react'
+import { ProjectVisual } from '../ui/ProjectVisual'
 import { useHeroMotion } from '../../hooks/useHeroMotion'
 
 function Hero() {
@@ -6,12 +7,14 @@ function Hero() {
   useHeroMotion(heroRef)
 
   return (
-    <section ref={heroRef} id="top" aria-labelledby="hero-heading" className="hero-editorial scroll-mt-20 bg-canvas text-ink">
+    <section ref={heroRef} id="top" aria-labelledby="hero-heading" className="hero-editorial bg-canvas text-ink">
       <div className="hero-shell">
         <div data-hero-identity className="hero-identity">
-          <p className="hero-name">Milan Stanojević <span className="hero-location">/ Belgrade, Serbia</span></p>
+          <p className="hero-location">Belgrade, Serbia</p>
           <p className="hero-role">Frontend-focused Full-Stack Developer</p>
         </div>
+
+        <p data-hero-name className="hero-name">Milan <span>Stanojević</span></p>
 
         <h1 id="hero-heading" className="hero-headline">
           <span data-hero-line className="hero-line">I build modern </span>
@@ -27,10 +30,10 @@ function Hero() {
               full-stack product features.
             </p>
             <div data-hero-detail className="hero-actions">
-              <a href="#work" className="hero-work-link">
+              <a href="#work" className="editorial-link">
                 View selected work <span aria-hidden="true" className="motion-arrow arrow-down">↓</span>
               </a>
-              <a href="https://github.com/milanNbg" target="_blank" rel="noopener noreferrer" className="text-link hero-github-link">
+              <a href="https://github.com/milanNbg" target="_blank" rel="noopener noreferrer" className="editorial-link">
                 GitHub <span aria-hidden="true" className="motion-arrow arrow-diagonal">↗</span>
               </a>
             </div>
@@ -43,8 +46,8 @@ function Hero() {
           <div data-hero-detail className="hero-project-wrap">
             <figure data-hero-drift className="hero-project">
               <div className="hero-project-image">
-                <img src="/projects/fluxo/dashboard.png" width={1919} height={1079}
-                  alt="Fluxo personal finance dashboard" decoding="async" fetchPriority="high" />
+                <ProjectVisual src="/projects/fluxo/dashboard.png" width={1919} height={1079}
+                  alt="Fluxo personal finance dashboard" priority />
               </div>
               <figcaption className="hero-project-caption">
                 <div>
