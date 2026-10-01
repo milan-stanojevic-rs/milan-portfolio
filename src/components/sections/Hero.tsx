@@ -19,7 +19,7 @@ function Hero() {
         <h1 id="hero-heading" className="hero-headline">
           <span data-hero-line className="hero-line">I build modern </span>
           <span data-hero-line className="hero-line">web applications </span>
-          <span data-hero-line className="hero-line hero-line-considered">that feel considered.</span>
+          <span data-hero-line className="hero-line hero-line-considered text-balance">thoughtfully designed, built to perform.</span>
         </h1>
 
         <div className="hero-bottom">
