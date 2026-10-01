@@ -30,7 +30,7 @@ Full-stack employee management application with browser-native screen recording.
 
 - React, TypeScript and Vite
 - Tailwind CSS
-- Native IntersectionObserver for one-time content reveals
+- GSAP and ScrollTrigger for responsive motion and scroll reveals
 - Responsive design and accessible reduced-motion behavior
 
 ## Local Development
@@ -57,7 +57,7 @@ npm run preview
 
 ## Deployment
 
-The project is intended to be deployed with Vercel. No portfolio production URL has been configured yet.
+Deployed with Vercel at [www.milan-stanojevic.com](https://www.milan-stanojevic.com/).
 
 ## Contact
 

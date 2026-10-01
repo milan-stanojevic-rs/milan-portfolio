@@ -53,7 +53,8 @@
 
   @media (prefers-reduced-motion: reduce) {
     html {
-      scroll-behavior: auto;
+      /* ScrollTrigger restores an inline scroll-behavior after refreshing. */
+      scroll-behavior: auto !important;
     }
   }
 }
@@ -205,7 +206,7 @@
 /* Selected Work: spacious, project-specific editorial compositions. */
 .work-shell { max-width: 1440px; margin-inline: auto; padding: 5rem clamp(1rem, 5vw, 5rem) 0; }
 .work-intro { margin-bottom: clamp(5rem, 10vw, 10rem); }
-.work-heading { font-family: var(--font-display); font-size: clamp(3.4rem, 14vw, 13rem); font-weight: 400; line-height: 0.82; letter-spacing: -0.07em; text-transform: uppercase; color: #c7c7c2; }
+.work-heading { font-family: var(--font-display); font-size: clamp(3.4rem, 14vw, 13rem); font-weight: 400; line-height: 0.82; letter-spacing: -0.07em; text-transform: uppercase; color: #8b8b85; }
 .work-heading span { display: block; }
 .work-heading span:last-child { margin-top: 0.12em; padding-left: 24%; font-style: italic; }
 .work-intro-note { max-width: 23rem; margin: 2.5rem 0 0 auto; font-size: 0.85rem; line-height: 1.8; color: var(--color-muted); }
@@ -429,7 +430,7 @@
 .experience-editorial { --color-muted: #595c62; scroll-margin-top: calc(var(--portfolio-nav-height) + 1rem); }
 .experience-shell { max-width: 1440px; margin-inline: auto; padding: clamp(2rem, 5vw, 5rem) clamp(1rem, 5vw, 5rem) clamp(5rem, 10vw, 10rem); }
 .experience-intro { margin-bottom: clamp(3.5rem, 8vw, 8rem); }
-.experience-display { font-family: var(--font-display); font-weight: 400; font-size: clamp(3.5rem, 16vw, 15rem); line-height: 0.95; letter-spacing: -0.03em; color: #c7c7c2; }
+.experience-display { font-family: var(--font-display); font-weight: 400; font-size: clamp(3.5rem, 16vw, 15rem); line-height: 0.95; letter-spacing: -0.03em; color: #8b8b85; }
 .experience-display > span { display: block; }
 .experience-display .experience-display-work { font-size: 0.6em; font-style: italic; margin-left: 9%; }
 .experience-intro-note { max-width: 25rem; margin: 2rem 0 0 auto; font-size: clamp(1rem, 0.94rem + 0.2vw, 1.125rem); line-height: 1.7; color: var(--color-muted); }
@@ -473,7 +474,7 @@
 .about-eyebrow { font-size: 0.8125rem; line-height: 1.7; letter-spacing: 0.06em; color: var(--color-muted); }
 .about-display { font-family: var(--font-display); font-size: clamp(5rem, 17vw, 16rem); line-height: 0.88; letter-spacing: -0.025em; font-weight: 400; margin-top: 2rem; }
 .about-display span { display: block; }
-.about-display span:first-child { color: #b9b9b3; }
+.about-display span:first-child { color: #8b8b85; }
 .about-display span:last-child { margin-left: 15%; font-style: italic; }
 .about-personal { max-width: 48ch; margin: 2.5rem 0 0 auto; font-size: clamp(1.0625rem, 0.96rem + 0.35vw, 1.25rem); line-height: 1.8; }
 .about-principles { list-style: none; padding: 0; margin: clamp(4rem, 9vw, 9rem) 0 0; }
