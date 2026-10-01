@@ -1,4 +1,4 @@
-﻿import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 const navigationItems = [
   { label: 'Work', href: '#work' },
@@ -66,7 +66,7 @@ function Navbar() {
         <a
           href="#top"
           onClick={closeMenu}
-          aria-label="Milan StanojeviÄ‡ portfolio â€” back to top"
+          aria-label="Milan Stanojević portfolio — back to top"
           className="justify-self-start py-2 text-xl font-semibold tracking-tighter no-underline"
         >
           MS.
@@ -95,7 +95,7 @@ function Navbar() {
             rel="noopener noreferrer"
             className="text-link inline-flex min-h-11 items-center py-2 text-sm font-semibold whitespace-nowrap no-underline transition-colors duration-150 hover:text-muted"
           >
-            GitHub â†—
+            GitHub ↗
           </a>
           <a
             href="/Milan_Stanojevic_CV.pdf"
@@ -103,7 +103,7 @@ function Navbar() {
             rel="noopener noreferrer"
             className="inline-flex min-h-11 items-center px-3 py-2 text-sm font-semibold whitespace-nowrap no-underline transition-colors duration-150 hover:bg-surface"
           >
-            CV â†“
+            CV ↓
           </a>
         </div>
         <button
@@ -145,7 +145,7 @@ function Navbar() {
               onClick={closeMenu}
               className="text-link inline-flex min-h-11 items-center py-2 text-sm font-semibold no-underline hover:text-muted"
             >
-              GitHub â†—
+              GitHub ↗
             </a>
           </li>
           <li>
@@ -156,7 +156,7 @@ function Navbar() {
               onClick={closeMenu}
               className="inline-flex min-h-11 items-center px-3 py-2 text-sm font-semibold no-underline hover:bg-surface"
             >
-              CV â†“
+              CV ↓
             </a>
           </li>
         </ul>
@@ -166,4 +166,3 @@ function Navbar() {
 }
 
 export default Navbar
-

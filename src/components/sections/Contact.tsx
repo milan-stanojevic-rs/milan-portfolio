@@ -1,4 +1,4 @@
-﻿import { useRef } from 'react'
+import { useRef } from 'react'
 import { useContactMotion } from '../../hooks/useContactMotion'
 
 function Contact() {
@@ -15,12 +15,12 @@ function Contact() {
         </div>
         <div data-contact-reveal className="contact-actions">
           <a href="mailto:milan@milan-stanojevic.com" className="editorial-link contact-email">
-            <span>milan@milan-stanojevic.com</span><span aria-hidden="true" className="motion-arrow arrow-diagonal">â†—</span>
+            <span>milan@milan-stanojevic.com</span><span aria-hidden="true" className="motion-arrow arrow-diagonal">↗</span>
           </a>
           <ul className="contact-secondary">
-            <li><a href="https://www.linkedin.com/in/milanstanojeviÄ‡" target="_blank" rel="noopener noreferrer" className="editorial-link">LinkedIn <span aria-hidden="true" className="motion-arrow arrow-diagonal">â†—</span></a></li>
-            <li><a href="https://github.com/milan-stanojevic-rs" target="_blank" rel="noopener noreferrer" className="editorial-link">GitHub <span aria-hidden="true" className="motion-arrow arrow-diagonal">â†—</span></a></li>
-            <li><a href="/Milan_Stanojevic_CV.pdf" target="_blank" rel="noopener noreferrer" className="editorial-link">Download CV <span aria-hidden="true" className="motion-arrow arrow-down">â†“</span></a></li>
+            <li><a href="https://www.linkedin.com/in/milan-stanojevic-rs" target="_blank" rel="noopener noreferrer" className="editorial-link">LinkedIn <span aria-hidden="true" className="motion-arrow arrow-diagonal">↗</span></a></li>
+            <li><a href="https://github.com/milan-stanojevic-rs" target="_blank" rel="noopener noreferrer" className="editorial-link">GitHub <span aria-hidden="true" className="motion-arrow arrow-diagonal">↗</span></a></li>
+            <li><a href="/Milan_Stanojevic_CV.pdf" target="_blank" rel="noopener noreferrer" className="editorial-link">Download CV <span aria-hidden="true" className="motion-arrow arrow-down">↓</span></a></li>
           </ul>
         </div>
       </div>

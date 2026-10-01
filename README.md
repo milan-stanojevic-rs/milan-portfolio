@@ -63,4 +63,3 @@ Deployed with Vercel at [www.milan-stanojevic.com](https://www.milan-stanojevic.
 
 - [GitHub](https://github.com/milan-stanojevic-rs)
 - [LinkedIn](https://www.linkedin.com/in/milan-stanojevic-rs)
-

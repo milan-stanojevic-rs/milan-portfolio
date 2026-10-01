@@ -1,4 +1,4 @@
-﻿import { useRef } from 'react'
+import { useRef } from 'react'
 import { ProjectVisual } from '../ui/ProjectVisual'
 import { useHeroMotion } from '../../hooks/useHeroMotion'
 
@@ -14,7 +14,7 @@ function Hero() {
           <p className="hero-role">Frontend-focused Full-Stack Developer</p>
         </div>
 
-        <p data-hero-name className="hero-name">Milan <span>StanojeviÄ‡</span></p>
+        <p data-hero-name className="hero-name">Milan <span>Stanojević</span></p>
 
         <h1 id="hero-heading" className="hero-headline">
           <span data-hero-line className="hero-line">I build modern </span>
@@ -31,10 +31,10 @@ function Hero() {
             </p>
             <div data-hero-detail className="hero-actions">
               <a href="#work" className="editorial-link">
-                View selected work <span aria-hidden="true" className="motion-arrow arrow-down">â†“</span>
+                View selected work <span aria-hidden="true" className="motion-arrow arrow-down">↓</span>
               </a>
               <a href="https://github.com/milan-stanojevic-rs" target="_blank" rel="noopener noreferrer" className="editorial-link">
-                GitHub <span aria-hidden="true" className="motion-arrow arrow-diagonal">â†—</span>
+                GitHub <span aria-hidden="true" className="motion-arrow arrow-diagonal">↗</span>
               </a>
             </div>
             <p data-hero-detail className="hero-availability">
@@ -54,13 +54,13 @@ function Hero() {
                   <p className="hero-project-label">Featured project</p>
                   <p className="hero-project-title">Fluxo <span>Full-Stack + AI</span></p>
                 </div>
-                <p className="hero-project-tech">React Â· TypeScript Â· Fastify Â· PostgreSQL</p>
+                <p className="hero-project-tech">React · TypeScript · Fastify · PostgreSQL</p>
               </figcaption>
             </figure>
           </div>
         </div>
 
-        <p data-hero-detail className="hero-toolkit">React Â· TypeScript Â· UI Engineering Â· Full-Stack</p>
+        <p data-hero-detail className="hero-toolkit">React · TypeScript · UI Engineering · Full-Stack</p>
       </div>
     </section>
   )
