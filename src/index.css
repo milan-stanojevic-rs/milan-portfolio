@@ -29,7 +29,6 @@
 
   body {
     margin: 0;
-    min-width: 320px;
     min-height: 100vh;
     background-color: var(--color-canvas);
     color: var(--color-ink);
@@ -521,4 +520,37 @@
 @media (max-width: 24rem) {
   .about-principle { grid-template-columns: 2rem minmax(0, 1fr); gap: 0.75rem; }
   .about-principle-number { font-size: 2.3rem; }
+}
+/* Final act: a single dark editorial surface through Contact and Footer. */
+.contact-editorial, .portfolio-footer { background: var(--color-dark); color: #f7f7f5; }
+.contact-editorial { scroll-margin-top: var(--portfolio-nav-height); }
+.contact-shell { max-width: 1440px; margin-inline: auto; padding: clamp(3.5rem, 7vw, 7rem) clamp(1rem, 5vw, 5rem) clamp(3.5rem, 6vw, 6rem); }
+.contact-display { font-family: var(--font-display); font-size: clamp(5rem, 18vw, 16.5rem); line-height: 0.95; font-weight: 400; letter-spacing: -0.035em; color: #aaa79f; }
+.contact-display span { display: block; }
+.contact-invitation { margin: clamp(2.5rem, 4vw, 4rem) 0 0 auto; max-width: 38rem; }
+.contact-invitation > p:first-child { font-family: var(--font-display); font-size: clamp(2rem, 3.5vw, 3.5rem); line-height: 1.15; }
+.contact-support { margin-top: 1rem; color: #bdbec3; font-size: clamp(1rem, 0.94rem + 0.2vw, 1.125rem); line-height: 1.8; }
+.contact-actions { margin-top: clamp(2rem, 4vw, 4rem); }
+.contact-email.editorial-link { display: flex; align-items: baseline; max-width: 100%; font-size: clamp(1.25rem, 3.5vw, 3.25rem); font-weight: 400; letter-spacing: -0.035em; gap: 0.5em; line-height: 1.45; padding-block: 1rem; }
+.contact-email > span:first-child { min-width: 0; overflow-wrap: anywhere; }
+.contact-email > .motion-arrow { flex-shrink: 0; }
+.contact-email::after { transform: scaleX(1); opacity: 0.5; }
+.contact-email:hover::after, .contact-email:focus-visible::after { opacity: 1; }
+.contact-secondary { display: flex; flex-wrap: wrap; gap: 0.75rem clamp(1.5rem, 4vw, 4rem); margin-top: 1.5rem; list-style: none; }
+.contact-secondary .editorial-link { font-weight: 400; }
+.contact-editorial :focus-visible { outline-color: #f7f7f5; }
+.footer-shell { max-width: 1440px; margin-inline: auto; display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 1.5rem 3rem; padding: 0 clamp(1rem, 5vw, 5rem) 5.5rem; font-size: 0.875rem; line-height: 1.8; color: #bdbec3; }
+.footer-identity > p:first-child { font-size: 1rem; color: #f7f7f5; }
+.footer-identity > p + p { margin-top: 0.25rem; }
+.editorial-top { position: fixed; right: clamp(0.75rem, 2vw, 2rem); bottom: 0.75rem; z-index: 40; display: inline-flex; align-items: center; justify-content: center; gap: 0.35rem; min-width: 48px; min-height: 48px; padding: 0.5rem; font-size: 0.875rem; line-height: 1.5; font-weight: 500; color: #fff; mix-blend-mode: difference; text-decoration: none; }
+.editorial-top .motion-arrow { margin-left: 0; }
+.editorial-top:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+.editorial-top:hover, .editorial-top:focus-visible { text-decoration: underline; text-underline-offset: 0.35em; }
+@media (max-width: 30rem) {
+  .contact-invitation { margin-left: 0; }
+  .footer-shell { display: grid; grid-template-columns: 1fr; gap: 1rem; }
+}
+@media (forced-colors: active) {
+  .editorial-top { color: LinkText; mix-blend-mode: normal; }
+  .editorial-top:focus-visible { outline-color: Highlight; }
 }

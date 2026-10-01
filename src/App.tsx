@@ -8,7 +8,10 @@ import Footer from './components/layout/Footer'
 import BackToTop from './components/ui/BackToTop'
 import { useRevealOnScroll } from './hooks/useRevealOnScroll'
 
+import { useInitialHashNavigation } from './hooks/useInitialHashNavigation'
+
 function App() {
+  useInitialHashNavigation()
   useRevealOnScroll()
   return (
     <>
