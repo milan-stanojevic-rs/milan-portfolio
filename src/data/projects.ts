@@ -1,4 +1,4 @@
-// Full factual project information retained for future case studies.
+﻿// Full factual project information retained for future case studies.
 export const projects = [
   {
     "id": "fluxo",
@@ -6,7 +6,7 @@ export const projects = [
     "name": "Fluxo",
     "subtitle": "AI-Powered Personal Finance Platform",
     "description": "A full-stack personal finance application for tracking transactions, monthly budgets and savings goals, with an AI assistant that provides contextual insights based on the user's financial data.",
-    "stack": "React 19 · TypeScript · Redux Toolkit · RTK Query · Tailwind CSS · Fastify · Prisma · PostgreSQL · Claude AI",
+    "stack": "React 19 Â· TypeScript Â· Redux Toolkit Â· RTK Query Â· Tailwind CSS Â· Fastify Â· Prisma Â· PostgreSQL Â· Claude AI",
     "highlights": [
       {
         "title": "AI STREAMING",
@@ -27,7 +27,7 @@ export const projects = [
         "label": "Live App"
       },
       {
-        "href": "https://github.com/milanNbg/fluxo",
+        "href": "https://github.com/milan-stanojevic-rs/fluxo",
         "label": "GitHub"
       }
     ],
@@ -44,7 +44,7 @@ export const projects = [
     "name": "PeopleOps Admin Portal",
     "subtitle": "Enterprise People Operations Dashboard",
     "description": "A responsive React and TypeScript admin application inspired by real-world HR and People Operations workflows, focused on reusable UI architecture, accessibility, responsive design and testing.",
-    "stack": "React 19 · TypeScript · React Router · SCSS · Vitest · React Testing Library · Playwright",
+    "stack": "React 19 Â· TypeScript Â· React Router Â· SCSS Â· Vitest Â· React Testing Library Â· Playwright",
     "highlights": [
       {
         "title": "UI ARCHITECTURE",
@@ -65,7 +65,7 @@ export const projects = [
         "label": "Live App"
       },
       {
-        "href": "https://github.com/milanNbg/peopleops-admin-portal",
+        "href": "https://github.com/milan-stanojevic-rs/peopleops-admin-portal",
         "label": "GitHub"
       }
     ],
@@ -86,7 +86,7 @@ export const projects = [
     "name": "Employee Management",
     "subtitle": "Full-Stack Employee Management & Screen Recording",
     "description": "A full-stack React and Express application for managing employee records, with SQLite persistence, runtime validation and browser-native screen sharing and recording.",
-    "stack": "React · TypeScript · Express 5 · SQLite · Zod · MediaStream · MediaRecorder",
+    "stack": "React Â· TypeScript Â· Express 5 Â· SQLite Â· Zod Â· MediaStream Â· MediaRecorder",
     "highlights": [
       {
         "title": "FULL-STACK FLOW",
@@ -103,7 +103,7 @@ export const projects = [
     ],
     "links": [
       {
-        "href": "https://github.com/milanNbg/employee-management-app",
+        "href": "https://github.com/milan-stanojevic-rs/employee-management-app",
         "label": "View Source"
       }
     ],
@@ -119,3 +119,4 @@ export const projects = [
     ]
   }
 ] as const
+

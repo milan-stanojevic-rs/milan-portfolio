@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+﻿import { useEffect, useRef, useState } from 'react'
 
 const navigationItems = [
   { label: 'Work', href: '#work' },
@@ -66,7 +66,7 @@ function Navbar() {
         <a
           href="#top"
           onClick={closeMenu}
-          aria-label="Milan Stanojević portfolio — back to top"
+          aria-label="Milan StanojeviÄ‡ portfolio â€” back to top"
           className="justify-self-start py-2 text-xl font-semibold tracking-tighter no-underline"
         >
           MS.
@@ -90,12 +90,12 @@ function Navbar() {
 
         <div className="hidden items-center gap-3 justify-self-end sm:gap-4 md:flex">
           <a
-            href="https://github.com/milanNbg"
+            href="https://github.com/milan-stanojevic-rs"
             target="_blank"
             rel="noopener noreferrer"
             className="text-link inline-flex min-h-11 items-center py-2 text-sm font-semibold whitespace-nowrap no-underline transition-colors duration-150 hover:text-muted"
           >
-            GitHub ↗
+            GitHub â†—
           </a>
           <a
             href="/Milan_Stanojevic_CV.pdf"
@@ -103,7 +103,7 @@ function Navbar() {
             rel="noopener noreferrer"
             className="inline-flex min-h-11 items-center px-3 py-2 text-sm font-semibold whitespace-nowrap no-underline transition-colors duration-150 hover:bg-surface"
           >
-            CV ↓
+            CV â†“
           </a>
         </div>
         <button
@@ -139,13 +139,13 @@ function Navbar() {
         <ul className="mt-3 flex items-center gap-6 border-t border-line pt-3">
           <li>
             <a
-              href="https://github.com/milanNbg"
+              href="https://github.com/milan-stanojevic-rs"
               target="_blank"
               rel="noopener noreferrer"
               onClick={closeMenu}
               className="text-link inline-flex min-h-11 items-center py-2 text-sm font-semibold no-underline hover:text-muted"
             >
-              GitHub ↗
+              GitHub â†—
             </a>
           </li>
           <li>
@@ -156,7 +156,7 @@ function Navbar() {
               onClick={closeMenu}
               className="inline-flex min-h-11 items-center px-3 py-2 text-sm font-semibold no-underline hover:bg-surface"
             >
-              CV ↓
+              CV â†“
             </a>
           </li>
         </ul>
@@ -166,3 +166,4 @@ function Navbar() {
 }
 
 export default Navbar
+
